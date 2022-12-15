@@ -1,0 +1,1381 @@
+:root {
+    --DeepOnyx: #3B3B3B;
+    --SocialError: #F6F6F6;
+    --Anakiwa: #83E1FF;
+}
+
+@font-face {
+    font-family: peyda;
+    src: url('../fonts/peyda/eot/PeydaWeb-Medium.eot');
+    src: url('../fonts/peyda/eot/PeydaWeb-Medium.eot') format('embedded-opentype'),
+        url('../fonts/peyda/woff/PeydaWeb-Medium.woff') format('woff'),
+        url('../fonts/peyda/woff2/PeydaWeb-Medium.woff2') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: peyda;
+    src: url('../fonts/peyda/eot/PeydaWeb-Bold.eot');
+    src: url('../fonts/peyda/eot/PeydaWeb-Bold.eot') format('embedded-opentype'),
+        url('../fonts/peyda/woff/PeydaWeb-Bold.woff') format('woff'),
+        url('../fonts/peyda/woff2/PeydaWeb-Bold.woff2') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "azarmehr";
+    src: url("../fonts/azarMehr/azarmehr-300.eot");
+    src: url("../fonts/azarMehr/azarmehr-300.eot") format("embedded-opentype"),
+        url("../fonts/azarMehr/azarmehr-300.woff2") format("woff2"),
+        url("../fonts/azarMehr/azarmehr-300.woff") format("woff"),
+        url("../fonts/azarMehr/azarmehr-300.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "azarmehr";
+    src: url("../fonts/azarMehr/azarmehr-400.eot");
+    src: url("../fonts/azarMehr/azarmehr-400.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/azarMehr/azarmehr-400.woff2") format("woff2"),
+        url("../fonts/azarMehr/azarmehr-400.woff") format("woff"),
+        url("../fonts/azarMehr/azarmehr-400.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "azarmehr";
+    src: url("../fonts/azarMehr/azarmehr-500.eot");
+    src: url("../fonts/azarMehr/azarmehr-500.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/azarMehr/azarmehr-500.woff2") format("woff2"),
+        url("../fonts/azarMehr/azarmehr-500.woff") format("woff"),
+        url("../fonts/azarMehr/azarmehr-500.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "azarmehr";
+    src: url("../fonts/azarMehr/azarmehr-700.eot");
+    src: url("../fonts/azarMehr/azarmehr-700.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/azarMehr/azarmehr-700.woff2") format("woff2"),
+        url("../fonts/azarMehr/azarmehr-700.woff") format("woff"),
+        url("../fonts/azarMehr/azarmehr-700.ttf") format("truetype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "maneli";
+    src: url("../fonts/maneli/maneli.ttf");
+    src: url("../fonts/maneli/maneli.ttf") format("truetype");
+     
+}
+
+html {
+    /*background-color: red;*/
+    direction: rtl;
+    font-family: 'azarmehr';
+    overflow-x: hidden;
+    background-color:  #F5F5F5;
+}
+body{
+    background-color: #F5F5F5;
+}
+
+.fold-1 {
+    position: relative;
+    /* height: 100vh;
+    max-height: 800px; */
+
+}
+
+.fold1__header {
+    background-color: var(--DeepOnyx);
+    padding: 9px 20px 9px 20px;
+    ;
+    font-size: 12px;
+    font-weight: 600;
+    /*line-height: 22.46;*/
+}
+
+.fold1-exceptHeader {
+    position: relative;
+    height: 100%;
+    /* background-image: url("bg-fold-1.svg"); */
+    /* background: url('./assets/Image/bg-fold-1.svg'); */
+    /* background: url('../Image/bg-fold-1.jpg'); */
+    /* background-color: #5D5DC6; */
+    /* height: 100vh; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* max-height: 800px; */
+}
+
+.fold1--topMenu {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5.5px);
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.fold1--topMenu ul  {
+    font-family: 'azarmehr';
+    list-style: none;
+    font-size: 15px;
+    font-weight: 400;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 0;
+   
+}
+
+.fold1--topMenu ul li ,#mySidenav ul li{
+    transition: 0.8s;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.fold1--topMenu ul li ,#mySidenav ul li {
+    padding: 8px;
+}
+.fold1--topMenu ul li::after ,#mySidenav ul li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e4ad3b;
+    transform-origin: bottom right;
+    transition: transform 0.8s ease-out;
+  }
+  
+  .fold1--topMenu ul li:hover::after ,#mySidenav ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+  }
+
+
+
+
+
+.fold1--topMenu ul li:hover ,#mySidenav ul li:hover {
+    color:#e4ad3b ;
+}
+#mySidenav ul{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke!important;
+}
+.fold1-menuMObile {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+
+
+.fold1--exceptHeader--textMain {
+    font-family: 'peyda';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 45px;
+    /*line-height: 80px;*/
+    /* or 178% */
+
+    text-align: center;
+
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.fold1--exceptHeader--textSub {
+    font-family: 'azarmehr';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    z-index: 2;
+    position: relative;
+     
+
+    text-align: center;
+
+    color: var(--Anakiwa);
+}
+
+.fold1--exceptHeader--play{
+    width: 60px;
+    transform: scale(1);
+    transition: transform 0.8s ease-out;
+ }
+.fold1--exceptHeader--play:hover{
+    width: 60px;
+    transform: scale(1.4);
+    transition: transform 0.8s ease-out;
+ }
+
+/* ###########Fold2########### */
+
+.fold-2 {
+    background-color: #F5F5F5;
+    margin-top: 80px;
+}
+/* .btn-4 {
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+    
+    span {
+      z-index: 20;
+    }
+    
+    &:after {
+      background: #fff;
+      content: "";
+      height: 155px;
+      left: -75px;
+      opacity: .2;
+      position: absolute;
+      top: -50px;
+      transform: rotate(35deg);
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+      width: 50px;
+      z-index: -10;
+    }
+  }
+  
+  .btn-4:hover {
+    
+    &:after {
+      left: 120%;
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  } */
+
+.fold2-banner {
+    background: linear-gradient(90deg, #49E9FF 1.9%, #0057FF 100%);
+    border-radius: 10px;
+    min-height: 114px;
+    width: 100%;
+    display: flex;
+    padding:0 48px ;
+    align-items: center;
+    justify-content: space-between;
+}
+.fold2-banner p{
+    color: white;
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2;
+    font-size: 18px;
+}
+.fold2-banner button{
+    position: relative;
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-size: 18px;
+    height:51px ;
+    background-color: #fff;
+    border-radius: 10px;
+    padding:0 39px;
+    color: #2CAEFF;
+    border: 0;
+    -webkit-transition: background-color  0.8s ease-out;
+    -ms-transition: background-color 0.8s ease-out;
+    transition: background-color  0.8s ease-out;
+    /* transition: background-color  0.8s ease-out; */
+     
+
+}
+/* .fold2-banner button:hover{
+   
+    -webkit-transition: background-color  0.8s ease-out;
+    -ms-transition: background-color  0.8s ease-out;
+    transition: background-color  0.8s ease-out;
+ 
+
+} */
+
+
+.fold2-banner button::before {
+    position: absolute;
+    content: "";
+    inset: 0; /* same as { top: 0; right: 0; bottom: 0; left: 0; } */
+    background: linear-gradient(90deg, #FFFFFF 0%, #95F2FF 100%);
+    box-shadow: 0px 8px 21px rgba(71, 180, 255, 0.5);
+    border-radius: 10px;
+    padding: 0 21px;
+    color: white;
+    /* z-index: 1; */
+    opacity: 0;
+    transition: all 0.4s linear;
+  }
+  
+  .fold2-banner button:hover::before {
+    opacity: 1;
+    color: #2CAEFF;
+  }
+
+  .fold2-banner button:hover {
+    opacity: 1;
+    color: #2CAEFF;
+
+  } 
+  .fold2-banner button span   {
+    position: relative;
+    z-index: 2;
+   }
+
+
+
+/* ######Fold3########### */
+.fold-3 {
+    margin-top: 100px;
+}
+
+.fold-3 h3 {
+    color: #545454;
+    font-family: 'peyda';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+}
+
+.fold-3 ul {
+    font-family: 'azarmehr';
+    list-style: none;
+    font-size: 15px;
+    font-weight: 400;
+    justify-content: space-between;
+    color: #787878;
+    margin-bottom: 0;
+    max-width: 900px;
+}
+
+/* .fold-3 ul li {
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    height: 38px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0 21px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.fold-3 ul li:hover {
+    height: 38px;
+    background: linear-gradient(90deg, #83C4FF 0%, #0084E4 100%);
+    box-shadow: 0px 10px 15px -5px rgba(117, 189, 252, 0.57);
+    border-radius: 10px;
+    padding: 0 21px;
+    color: white;
+} */
+
+
+.fold-3 ul li {
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    height: 38px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0 21px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    /* margin-left:30px ; */
+}
+
+.fold-3 ul li::before {
+    position: absolute;
+    content: "";
+    inset: 0; /* same as { top: 0; right: 0; bottom: 0; left: 0; } */
+    background: linear-gradient(90deg, #83C4FF 0%, #0084E4 100%);
+    box-shadow: 0px 10px 15px -5px rgba(117, 189, 252, 0.57);
+    border-radius: 10px;
+    padding: 0 21px;
+    color: white;
+    /* z-index: 1; */
+    opacity: 0;
+    transition: opacity 0.4s linear;
+  }
+  
+  .fold-3 ul li:hover::before {
+    opacity: 1;
+    color: white;
+  }
+
+  .fold-3 ul li:hover {
+    opacity: 1;
+    color: white;
+
+  } 
+  .fold-3 ul li span   {
+    position: relative;
+    z-index: 2;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fold3--main {
+    margin-top: 325px;
+}
+
+.fold3--main--right h4 {
+    font-family: 'azarmehr';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    text-align: center;
+    color: #525252;
+}
+
+.fold3--main--right p {
+    margin-top: 38px;
+    font-family: 'azarmehr';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 2;
+    text-align: justify;
+    color: #747474;
+}
+
+.fold3--main--left {
+    padding: 40px;
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+     height: 100%;
+     min-height: 300px;
+ 
+    background: url('../Image/box-player.svg');
+    background-repeat: no-repeat;
+}
+.fold3--main--left img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+.fold3--main--left p {
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    width: 75%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fold3--leftTriangle {
+    position: absolute;
+    width: 500.88px;
+    height: 500.88px;
+    left: -321px;
+    top: 100px;
+    background: linear-gradient(210.93deg, rgba(63, 98, 195, 0.07) 1.39%, rgba(55, 78, 192, 0) 49.94%);
+    border-radius: 110px;
+    transform: rotate(41.36deg);
+}
+
+/* #########Fold4############ */
+.fold-4 {
+    margin-top: 100px;
+}
+
+.fold-4 h3 {
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    text-align: right;
+    color: #2E2EB7;
+    margin-bottom: 30px;
+
+}
+
+.fold-4 ul {
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: right;
+    color: #2E2EB7;
+    list-style-type: decimal;
+    padding-right: 18px;
+
+}
+
+.fold-4 li {
+    margin-top: 6px;
+    font-size: 16px;
+}
+
+/* ######### Fold 5 ############ */
+.fold-5 {
+    margin-top: 100px;
+}
+
+
+.fold-5 h3 {
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    text-align: right;
+    color: #2E2EB7;
+    margin-bottom: 30px;
+}
+
+.fold-5 p {
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    color: #2E2EB7;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+/* ##########fold-6######## */
+.fold-6 {
+    margin-top: 20px;
+}
+
+.fold-6 h3 {
+    width: 100%;
+    text-align: right;
+    border-bottom: 1px solid rgba(46, 46, 183, 0.5);
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+
+.fold-6 h3 span {
+    background: #F5F5F5;
+    padding: 0 0 0 20px;
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    color: #2E2EB7;
+}
+
+.fold-6 h4 {
+    padding-top: 32px;
+    text-align: justify;
+    color: #858585;
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+
+}
+
+.fold-6 ul {
+    margin-top: 23px;
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: right;
+    color: black;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.fold-6 ul li {
+    display: flex;
+    align-items: center;
+    background: #FAFAFA;
+    border-radius: 5px;
+    padding: 0 21px;
+    height: 40px;
+    margin-top: 8px;
+
+}
+
+.fold-6 .collapseBody1 p {
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 2.5;
+    text-align: justify;
+    color: #858585;
+}
+
+.fold6--btnCollapse {
+    height: 38px;
+    border-radius: 10px;
+    padding: 0 27px;
+    display: flex;
+    align-items: center;
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    border: 0;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 20px;
+}
+
+.fold6_btnGreen {
+    background: linear-gradient(90deg, #51DFBD 0%, #1CB08D 100%);
+}
+
+.fold6_btnBlue {
+    background: linear-gradient(90deg, #83C4FF 0%, #0084E4 100%);
+}
+
+
+
+
+/* ########fold-7############## */
+.fold-7 {
+    margin-top: 100px;
+    position: relative;
+}
+
+.fold-7 h2 {
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    text-align: center;
+    color: #2E2EB7;
+}
+
+.fold-7 ul {
+    /* margin-top: 35px; */
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #787878;
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+
+
+
+.fold-7 ul li {
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    height: 38px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0 21px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    /* margin-left:30px ; */
+}
+
+.fold-7 ul li::before {
+    position: absolute;
+    content: "";
+    inset: 0; /* same as { top: 0; right: 0; bottom: 0; left: 0; } */
+    background: linear-gradient(90deg, #83C4FF 0%, #0084E4 100%);
+    box-shadow: 0px 10px 15px -5px rgba(117, 189, 252, 0.57);
+    border-radius: 10px;
+    padding: 0 21px;
+    color: white;
+    /* z-index: 1; */
+    opacity: 0;
+    transition: opacity 0.4s linear;
+  }
+  
+  .fold-7 ul li:hover::before {
+    opacity: 1;
+    color: white;
+  }
+
+  .fold-7 ul li:hover {
+    opacity: 1;
+    color: white;
+
+  } 
+  .fold-7 ul li span   {
+    z-index: 2;
+   }
+
+/* .fold-7 ul li:hover {
+    height: 38px;
+    background: linear-gradient(90deg, #83C4FF 0%, #0084E4 100%);
+    box-shadow: 0px 10px 15px -5px rgba(117, 189, 252, 0.57);
+    border-radius: 10px;
+    padding: 0 21px;
+    color: white;
+    transition: transform 0.8s ease-out;
+} */
+
+.fold7--customCard {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 11px;
+    margin-top: 40px;
+
+}
+.fold7--customCard:hover .fold7--customCard--imgGray {
+  
+    filter: blur(1px) grayscale(0) brightness(150%) opacity(70%);
+    transform: scale(1.5);
+    transition: 1s all linear, 1s -webkit-filter linear;
+}
+
+.fold7--customCard--imgGray {
+    border-radius: 5px;
+    width: 100%;
+
+    filter: blur(6px) grayscale(1) brightness(150%) opacity(70%);
+    margin: -5px -10px -10px -5px;
+       transition: 1s filter linear, 1s -webkit-filter linear;
+
+    /* background: linear-gradient(270deg, #9D9D9D 0%, #545454 100%); */
+}
+.fold7--customCard--imgnormal {
+    border-radius: 5px;
+    width: 100%;
+    filter: blur(0px) grayscale(0)  ;
+    margin: -5px -10px -10px -5px;
+    transition: 1s filter linear, 1s -webkit-filter linear;
+    
+
+    /* background: linear-gradient(270deg, #9D9D9D 0%, #545454 100%); */
+}
+
+.fold7--customCard h4 {
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+    margin-top: 40px;
+    text-align: center;
+
+
+}
+
+.fold7--customCard p {
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    margin-top: 20px;
+    color: #000000;
+    opacity: 0.5;
+
+}
+
+.fold7--customCard--palyGary {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ########fold-8############## */
+.fold-8 {
+    margin-top: 100px;
+    position: relative;
+}
+ 
+
+.fold-8 h2 {
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    text-align: center;
+    color: #2E2EB7;
+    margin-bottom: 43px;
+}
+.maneliFooter{
+    margin-top: 140px;
+    font-family:'maneli';
+    font-style: normal;
+font-weight: 400;
+font-size: 20px;
+ 
+text-align: center;
+
+color: #2E2EB7;
+}
+
+
+
+/* ##############footer############## */
+
+.footer {
+    position: relative;
+    margin-top: 100px;
+    padding: 80px 10px;
+    background-color: #333;
+}
+
+.footer--contactUs {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+}
+.footer--contactUs ul li {
+    color: whitesmoke;
+    align-items: flex-start;
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.footer h3 {
+    color: #e4ad3b;
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+
+}
+
+.footer ul {
+    margin-top: 15px;
+    color: #e4ad3b;
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer ul li {
+    margin-top: 4px;
+    font-size: 13px;
+    color: white;
+    font-weight: 400;
+    font-family: 'azarMehr';
+}
+
+.footer--links {
+    display: flex;
+    justify-content: space-around;
+    /* border-left: 2px solid #4b4747; */
+    border-right: 2px solid #4b4747;
+}
+
+.footer--links ul {
+    list-style: none;
+    padding-right: 0;
+}
+
+.footer--links input {
+    color: white;
+    font-family: 'azarMehr';
+    background-color: #404040;
+    border: none;
+    border-radius: 10px;
+
+    height: 35px;
+    padding: 0 12px;
+    text-align: right;
+    width: 250px;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.footer--links textarea {
+    color: white;
+    font-size: 12px;
+    font-family: 'azarMehr';
+    margin-top: 8px;
+    background-color: #404040;
+    border-radius: 10px;
+
+    padding: 0 12px;
+    text-align: right;
+    width: 250px;
+
+    border: none;
+    box-shadow: none;
+    outline: 0;
+    padding: 6px 12px;
+    resize: none;
+}
+
+.footer--links form button {
+    font-family: 'azarMehr';
+    margin-top: 8px;
+    background: #fab924;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    height: 36px;
+    width: 250px;
+}
+
+.footer--validation {
+    display: flex;
+    justify-content: center;
+    border-right: 2px solid #4b4747;
+}
+/* #########footer-bottom############## */
+.footer-bottom{
+    background-color: black;
+    font-size: 13px;
+    padding: 23px 0;
+    color: whitesmoke;
+}
+.social-medias a {
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 17px;
+    height: 30px;
+    justify-content: center;
+    margin-right: 6px;
+    width: 30px;
+    }    
+
+
+
+
+
+
+
+/* #########girl########### */
+.col-container {
+    display: flex;
+    width: 100%;
+}
+
+.col-item {
+    display: flex;
+    align-self: stretch;
+}
+
+.line1{
+    position: absolute;
+    /* bottom: 0; */
+    left: 32%;
+    top: 72%;
+    transform: translate(-50%,-50%);
+}
+.line2{
+    position: absolute;
+    /* bottom: 0; */
+    left: 29%;
+    top: 51%;
+    transform: translate(-50%,-50%);
+}.line3{
+    position: absolute;
+    /* bottom: 0; */
+    left: 34%;
+    top: 22%;
+    transform: translate(-50%,-50%);
+}.line4{
+    position: absolute;
+    /* bottom: 0; */
+    left: 66%;
+    top: 22%;
+    transform: translate(-50%,-50%);
+}
+.line5{
+    position: absolute;
+    /* bottom: 0; */
+    left: 71%;
+    top: 51%;
+    transform: translate(-50%,-50%);
+}
+.line6{
+    position: absolute;
+    /* bottom: 0; */
+    left: 68%;
+    top: 72%;
+    transform: translate(-50%,-50%);
+}
+.textBox{
+    min-height: 60px;
+    padding: 0 29px;
+    background: #FFFFFF;
+border-radius: 10px;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+max-width: 330px;
+font-family: 'azarMehr';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+text-align: right;
+color: #2E2EB7;
+display: flex;
+align-items: center;
+}
+ 
+.box1{
+    position: absolute;
+    /* bottom: 0; */
+    left: 19%;
+    top: 79%;
+    transform: translate(-50%,-50%);
+}
+.box2{
+    position: absolute;
+    /* bottom: 0; */
+    left: 15%;
+    top: 51%;
+    transform: translate(-50%,-50%);
+}.box3{
+    position: absolute;
+    /* bottom: 0; */
+    left: 22%;
+    top: 15%;
+    transform: translate(-50%,-50%);
+}.box4{
+    position: absolute;
+    /* bottom: 0; */
+    left: 78%;
+    top: 15%;
+    transform: translate(-50%,-50%);
+}
+.box5{
+    position: absolute;
+    /* bottom: 0; */
+    left: 82%;
+    top: 51%;
+    transform: translate(-50%,-50%);
+}
+.box6{
+    position: absolute;
+    /* bottom: 0; */
+    left: 79%;
+    top: 79%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+
+
+
+
+
+/*############Public Style ###########*/
+
+
+.DeepOnyx-color {
+    color: var(--DeepOnyx);
+}
+
+.DeepOnyx-bg {
+    background-color: var(--DeepOnyx);
+}
+
+.SocialError-color {
+    color: var(--SocialError);
+}
+
+.SocialError-bg {
+    background-color: var(--SocialError);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.azarMehr{
+    font-family: 'azarMehr';
+}
+.peyda{
+    font-family: 'peyda';
+}
+
+
+
+
+
+.collapseHeader-close {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 10px;
+    padding: 0px 24px 0 18px;
+    height: 49px;
+    border: 0;
+    color: #494949;
+    z-index: 1;
+    font-weight: 400;
+    font-family: 'azarMehr';
+    font-size: 13px;
+}
+
+.collapseHeader-close:hover {
+
+    background-color: #0661FF;
+    color: white;
+}
+
+.collapseHeader-open {
+    position: relative;
+    background-color: #0661FF;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px 10px 0 0;
+    padding: 0px 24px 0 18px;
+    min-height: 49px;
+    border: 0;
+    z-index: 1;
+    font-weight: 400;
+    font-family: 'azarMehr';
+}
+
+.collapseBody1 {
+    position: relative;
+    background: white;
+    border-radius: 5px 0 0 5px;
+    padding: 14px 20px;
+    z-index: 1;
+    font-family: 'azarMehr';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+
+text-align: right;
+
+color: #494949;
+}
+.collapseBody2 {
+    position: relative;
+    background: white;
+    border-radius: 0 0 5px 5px;
+    padding: 14px 20px;
+    z-index: 1;
+    font-family: 'azarMehr';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: justify;
+
+    color: #858585;
+
+}
+
+.box-left {
+    position: absolute;
+    top: 23px;
+    left: -10vw;
+}
+.box-right {
+    position: absolute;
+    top: 23px;
+    right: -10vw;
+}
+
+.triangle-right {
+    position: absolute;
+    top: 70px;
+    right: 0;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 99;
+
+}
+
+.sidenav li , .sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size:18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+     
+
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.center-x-y {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+
+@media only screen and (min-width: 800px) {
+    .w48-100 {
+        width: 48%;
+    }
+  
+
+    .column-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .w48-100 {
+        width: 100%;
+    }
+    .w100-50 {
+        width: 50%;
+    }
+
+    .column-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fold1--exceptHeader--textMain {
+        font-size: 25px;
+    }
+
+    .fold1--exceptHeader--textSub {
+        font-size: 14px;
+    }
+    .fold1--exceptHeader--play{
+        width: 40px;
+    }
+    .fold2-banner {
+        flex-direction: column;
+    }
+    .fold-6 h3 span {
+        font-size: 14px;
+    }
+    .footer--links {
+        border: 0;
+    }
+    .footer--validation {
+        border: 0;
+    }
+}
+
+@-webkit-keyframes ScaleIn {
+    from   { -webkit-transform: scale(1); }
+    to { -webkit-transform: scale(1.4);}
+}
+
+@-webkit-keyframes Scaleout {
+    0%   { -webkit-transform: scale(1.4); }
+    100% { -webkit-transform: scale(1); }
+}
+
+/* @keyframe ScaleIn {
+    from: transform: rotate(0deg);
+    to: transform: rotate(360deg);
+}
+
+@keyframe Scaleout {
+    from: transform: rotate(360deg);
+    to: transform: rotate(0deg);
+} */
+
+
+
+
+
+
+
+
+
+.box  {
+    height: 30px; 
+  }
+  .hid-box {
+     
+    top: 100%;
+    position: relative;
+    transition: all .3s ease-out;
+  
+    height: 100%;
+  }
+  
+  .box:hover > .hid-box{
+    top: 0;
+  }
